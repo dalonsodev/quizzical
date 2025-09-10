@@ -146,11 +146,9 @@ export default function QuizzicalApp() {
    
    return (
       <main>
-         <div className="top-blob-container"></div>
          <section className={clsx("questions", { "fade-in": !isLoading })}>
             {getContent()}
          </section>
-         <div className="bottom-blob-container"></div>
       </main>
    )
 }
