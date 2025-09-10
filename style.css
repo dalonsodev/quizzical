@@ -78,6 +78,9 @@ main {
    min-height: 100vh;
    display: flex;
    justify-content: center;
+   height: -webkit-fill-available;
+   overflow: auto;
+   -webkit-overflow-scrolling: touch;
 }
 
 h1.title {
