@@ -77,8 +77,6 @@ body {
    background-position: center;
    background-repeat: no-repeat;
    min-height: 100dvh;
-   height: 100dvh;
-   overflow: hidden;
 }
 
 main {
@@ -106,7 +104,7 @@ section.intro {
    align-items: center;
    justify-content: center;
    min-height: 100dvh;
-   height: 100dvh;
+   height: auto;
    overflow: hidden;
    opacity: 1;
    transform: translateY(0);
@@ -116,7 +114,7 @@ section.intro {
 section.intro.fade-out {
    opacity: 0;
    transform: translateY(-20px);
-   height: 100dvh;
+   height: auto;
 }
 
 .loading {
@@ -271,7 +269,6 @@ button.play-again {
 @media (max-width: 600px) {
    body {
       background-image: url("intro-bg-mobile.png");
-      background-size: contain;
    }
    button.start {
       padding: 1.25em 3.75em;
