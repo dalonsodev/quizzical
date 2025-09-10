@@ -97,11 +97,13 @@ section.intro {
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   height: 100vh;
+   height: auto;
    opacity: 1;
    transform: translateY(0);
    transition: opacity 0.5s ease, transform 0.5s ease;
    overflow: hidden;
+   min-height: 100dvh;
+   outline: 1px solid red; /* Esto mostrará los bordes de la sección */
 }
 
 section.intro.fade-out {
@@ -186,10 +188,15 @@ label.answer-button {
    transition: background-color 0.3s ease, border 0.3s ease, opacity 0.3s ease;
 }
 
+input[type="radio"]:checked ~ label,
+.answer label.answer-button.correct,
+.answer label.answer-button.incorrect {
+   padding-block: 0.45em;
+}
+
 input[type="radio"]:checked ~ label {
    background-color: var(--btn-alt-selected-bg);
    border: none;
-   padding-block: 0.45em;
 }
 
 .answer label.answer-button.correct {
