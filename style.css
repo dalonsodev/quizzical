@@ -78,9 +78,6 @@ main {
    min-height: 100vh;
    display: flex;
    justify-content: center;
-   height: -webkit-fill-available;
-   overflow: auto;
-   -webkit-overflow-scrolling: touch;
 }
 
 h1.title {
@@ -103,7 +100,8 @@ section.intro {
    height: 100vh;
    opacity: 1;
    transform: translateY(0);
-   transition: opacity 0.5 ease, transform 0.5 ease;
+   transition: opacity 0.5s ease, transform 0.5s ease;
+   overflow: hidden;
 }
 
 section.intro.fade-out {
