@@ -11,6 +11,7 @@
    /* Button colors */
    --btn-primary-color: #F5F7FB;
    --btn-primary-bg: #4D5B9E;
+   --btn-primary-hover: #357abd;
    --btn-alt-color: #293264;
    --btn-alt-bg: transparent;
    --btn-alt-border: #4D5B9E;
@@ -36,6 +37,10 @@ h1, h2, h3, h4, h5, h6 {
    margin: 0;
 }
 
+section {
+   padding: 0 1em;
+}
+
 button {
    color: var(--btn-primary-color);
    background-color: var(--btn-primary-bg);
@@ -55,11 +60,10 @@ button.start {
 button.start:hover, 
 button.check:hover, 
 button.play-again:hover {
-   background-color: #357abd; /* Oscurecer el color primario */
+   background-color: var(--btn-primary-hover);
 }
 
 body {
-   min-height: 100vh;
    font-family: var(--font-family);
    color: var(--body-color);
    background-color: var(--body-bg);
@@ -70,7 +74,8 @@ body {
 }
 
 main {
-   height: 100%;
+   position: relative;
+   min-height: 100vh;
    display: flex;
    justify-content: center;
 }
@@ -83,6 +88,7 @@ h1.title {
 span.subtitle {
    font-family: var(--alt-font-family);
    margin-bottom: 1.75em;
+   text-align: center;
 }
 
 section.intro {
@@ -139,7 +145,7 @@ section.questions.fade-in > form, section.questions.fade-in .results {
 
 section.questions > form > ul {
    max-width: 400px;
-   padding-top: 24px;
+   padding-top: 1.5em;
 }
 
 li.question {
@@ -235,5 +241,17 @@ button.play-again {
    100% { 
       transform: scale(1); 
       opacity: 1; 
+   }
+}
+
+@media (max-width: 450px) {
+   section.questions > form > ul {
+      padding-top: 0.75em;
+   }
+}
+
+@media (max-width: 600px) {
+   body {
+      background-image: url("intro-bg-mobile.png");
    }
 }
