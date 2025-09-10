@@ -63,6 +63,11 @@ button.play-again:hover {
    background-color: var(--btn-primary-hover);
 }
 
+body, main {
+   margin: 0;
+   padding: 0;
+}
+
 body {
    font-family: var(--font-family);
    color: var(--body-color);
@@ -71,11 +76,14 @@ body {
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
+   min-height: 100dvh;
+   height: 100dvh;
+   overflow: hidden;
 }
 
 main {
    position: relative;
-   min-height: 100vh;
+   min-height: 100dvh;
    display: flex;
    justify-content: center;
 }
@@ -97,18 +105,18 @@ section.intro {
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   height: auto;
+   min-height: 100dvh;
+   height: 100dvh;
+   overflow: hidden;
    opacity: 1;
    transform: translateY(0);
    transition: opacity 0.5s ease, transform 0.5s ease;
-   overflow: hidden;
-   min-height: 100dvh;
-   outline: 1px solid red; /* Esto mostrará los bordes de la sección */
 }
 
 section.intro.fade-out {
    opacity: 0;
    transform: translateY(-20px);
+   height: 100dvh;
 }
 
 .loading {
@@ -263,6 +271,7 @@ button.play-again {
 @media (max-width: 600px) {
    body {
       background-image: url("intro-bg-mobile.png");
+      background-size: contain;
    }
    button.start {
       padding: 1.25em 3.75em;
