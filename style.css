@@ -91,6 +91,7 @@ span.subtitle {
    text-align: center;
 }
 
+/* Layout elements */
 section.intro {
    display: flex;
    flex-direction: column;
@@ -228,7 +229,7 @@ button.play-again {
    align-items: center;
 }
 
-
+/* Keyframes rules */
 @keyframes pulse {
    0% { 
       transform: scale(1); 
@@ -244,6 +245,7 @@ button.play-again {
    }
 }
 
+/* Media queries */
 @media (max-width: 450px) {
    section.questions > form > ul {
       padding-top: 0.75em;
@@ -253,5 +255,23 @@ button.play-again {
 @media (max-width: 600px) {
    body {
       background-image: url("intro-bg-mobile.png");
+   }
+   button.start {
+      padding: 1.25em 3.75em;
+      font-family: var(--alt-font-family);
+      border-radius: 15px;
+      letter-spacing: 0.5px;
+      font-weight: 500;
+   }
+   button.check,
+   button.play-again {
+      margin-block: 2.5em;
+      font-size: 0.8rem;
+      font-weight: 500;
+   }
+   button.play-again {
+      height: 40px;
+      display: flex;
+      align-items: center;
    }
 }
